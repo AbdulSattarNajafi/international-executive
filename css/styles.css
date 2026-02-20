@@ -1034,7 +1034,7 @@ img {
   font-weight: 600;
   font-size: 16px;
 }
-.agenda__table-header .agenda__table-topic {
+.agenda__table-header .agenda__table-text {
   font-weight: 600;
   font-size: 16px;
 }
@@ -1047,7 +1047,7 @@ img {
   text-align: center;
   border-right: 1px solid #dfeaef;
 }
-.agenda__table-topic {
+.agenda__table-text {
   font-size: 16px !important;
   flex: 1;
   padding: 10px 16px;
@@ -1060,7 +1060,7 @@ img {
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
-  .agenda__table-topic {
+  .agenda__table-text {
     padding: 10px 24px;
   }
 }
