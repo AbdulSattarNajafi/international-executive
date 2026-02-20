@@ -1014,31 +1014,31 @@ img {
   margin-bottom: 3rem;
   overflow-x: auto;
 }
-.agenda__table {
+.agenda__schedule {
   min-width: 830px;
   width: 100%;
   color: var(--white);
   background-color: var(--card-bg);
   box-shadow: var(--box-shadow);
 }
-.agenda__table-header {
+.agenda__schedule-header {
   background-color: #1f5eea;
 }
-.agenda__table-row {
+.agenda__schedule-row {
   display: flex;
   border-bottom: 1px solid #dfeaef;
 }
 
-.agenda__table-header .agenda__table-time {
+.agenda__schedule-header .agenda__schedule-time {
   background-color: var(--pink);
   font-weight: 600;
   font-size: 16px;
 }
-.agenda__table-header .agenda__table-text {
+.agenda__schedule-header .agenda__schedule-text {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem !important;
 }
-.agenda__table-time {
+.agenda__schedule-time {
   font-size: 16px;
   flex-shrink: 0;
   min-width: 150px;
@@ -1047,8 +1047,8 @@ img {
   text-align: center;
   border-right: 1px solid #dfeaef;
 }
-.agenda__table-text {
-  font-size: 16px !important;
+.agenda__schedule-text {
+  font-size: 1rem !important;
   flex: 1;
   padding: 10px 16px;
   min-width: 680px;
@@ -1060,7 +1060,7 @@ img {
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
-  .agenda__table-text {
+  .agenda__schedule-text {
     padding: 10px 24px;
   }
 }
