@@ -1015,7 +1015,7 @@ img {
   overflow-x: auto;
 }
 .agenda__schedule {
-  min-width: 840px;
+  min-width: 830px;
   width: 100%;
   color: var(--white);
   background-color: var(--card-bg);
@@ -1029,11 +1029,6 @@ img {
   border-bottom: 1px solid #dfeaef;
 }
 
-.agenda__schedule-row div:last-child {
-  min-width: 10px;
-  width: 10px;
-}
-
 .agenda__schedule-header .agenda__schedule-time {
   background-color: var(--pink);
   font-weight: 600;
@@ -1041,7 +1036,7 @@ img {
 }
 .agenda__schedule-header .agenda__schedule-text {
   font-weight: 600;
-  font-size: 1rem !important;
+  font-size: 16px;
 }
 .agenda__schedule-time {
   font-size: 16px;
@@ -1053,7 +1048,7 @@ img {
   border-right: 1px solid #dfeaef;
 }
 .agenda__schedule-text {
-  font-size: 1rem !important;
+  font-size: 16px;
   flex: 1;
   padding: 10px 16px;
   min-width: 680px;
