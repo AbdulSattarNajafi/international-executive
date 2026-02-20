@@ -1032,9 +1032,11 @@ img {
 .agenda__table-header .agenda__table-time {
   background-color: var(--pink);
   font-weight: 600;
+  font-size: 16px;
 }
 .agenda__table-header .agenda__table-topic {
   font-weight: 600;
+  font-size: 16px;
 }
 .agenda__table-time {
   font-size: 16px;
@@ -1044,6 +1046,7 @@ img {
   padding: 10px 4px;
   text-align: center;
   border-right: 1px solid #dfeaef;
+  color: rgb(27, 242, 92);
 }
 .agenda__table-topic {
   font-size: 16px;
