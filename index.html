@@ -47,13 +47,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="preload"
-      as="font"
-      type="font/woff2"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
@@ -61,87 +54,6 @@
     <!--  ------- Custom Style ------- -->
     <link rel="stylesheet" href="./css/styles.css" />
 
-    <!-- -------- JOT Scripts ---------- -->
-    <script charset="UTF-8" defer>
-      (function (m) {
-        function n(b) {
-          return null === b ? null : b.scrollHeight > b.clientHeight ? b : n(b.parentNode);
-        }
-        function u(b) {
-          if (b.data && '[object String]' == Object.prototype.toString.call(b.data)) {
-            var e = {};
-            try {
-              e = JSON.parse(b.data);
-            } catch (v) {}
-            !e.height || p || q || (d.style.height = +e.height + 'px');
-            if (e.getter) {
-              b = {};
-              e = [].concat(e.getter);
-              var k,
-                w = e.length;
-              for (k = 0; k < w; k++) {
-                var r = k;
-                var c = e[k] || {};
-                c.n && (r = c.n);
-                var g = null;
-                try {
-                  switch (c.t) {
-                    case 'window':
-                      var f = window;
-                      break;
-                    case 'scrollParent':
-                      f = n(a) || window;
-                      break;
-                    default:
-                      f = a;
-                  }
-                  if (c.e)
-                    if ('rect' === c.v) {
-                      g = {};
-                      var l = f.getBoundingClientRect();
-                      g = { top: l.top, left: l.left, width: l.width, height: l.height };
-                    } else g = f[c.v].apply(f, [].concat(c.e)) || !0;
-                  else c.s ? ((f[c.v] = c.s), (g = !0)) : (g = f[c.v] || !1);
-                } catch (v) {}
-                b[r] = g;
-              }
-              b.innerState = !p && !q;
-              a.contentWindow.postMessage(JSON.stringify({ queryRes: b }), '*');
-            }
-          }
-        }
-        for (
-          var t = m.document, h = t.documentElement;
-          h.childNodes.length && 1 == h.lastChild.nodeType;
-        )
-          h = h.lastChild;
-        var d = h.parentNode,
-          a = t.createElement('iframe');
-        d.style.overflowY = 'auto';
-        d.style.overflowX = 'hidden';
-        var p = d.style.height && 'auto' !== d.style.height,
-          q =
-            'absolute' === d.style.position ||
-            (window.getComputedStyle &&
-              'absolute' === window.getComputedStyle(d, null).getPropertyValue('position')) ||
-            (d.currentStyle && 'absolute' === d.currentStyle.position);
-        m.addEventListener && m.addEventListener('message', u, !1);
-        a.src = 'https://events.sangfor.com/3VxLv';
-        a.id = 'mkin3VxLv';
-        a.onload = function () {
-          a.contentWindow.postMessage(JSON.stringify({ cif: 1 }), '*');
-        };
-        a.frameBorder = 0;
-        a.scrolling = 'no';
-        a.style.display = 'block';
-        a.style.minWidth = '100%';
-        a.style.width = '100px';
-        a.style.height = '100%';
-        a.style.border = 'none';
-        a.style.overflow = 'auto';
-        d.insertBefore(a, h);
-      })(window);
-    </script>
     <!-- -------- Google Tag Manager ---------- -->
     <script>
       (function (w, d, s, l, i) {
@@ -154,6 +66,67 @@
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-MCTHSDB');
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        (function (m) {
+          function n(b) {
+            return b === null ? null : b.scrollHeight > b.clientHeight ? b : n(b.parentNode);
+          }
+
+          function u(b) {
+            if (b.data && Object.prototype.toString.call(b.data) === '[object String]') {
+              var e = {};
+              try {
+                e = JSON.parse(b.data);
+              } catch {}
+
+              !e.height || p || q || (d.style.height = +e.height + 'px');
+            }
+          }
+
+          var t = document;
+          var d = t.getElementById('contact-form');
+
+          // ✅ important check
+          if (!d) {
+            console.error('contact-form div not found');
+            return;
+          }
+
+          var a = t.createElement('iframe');
+
+          d.style.overflowY = 'auto';
+          d.style.overflowX = 'hidden';
+
+          var p = d.style.height && 'auto' !== d.style.height;
+
+          var q =
+            'absolute' === d.style.position ||
+            (window.getComputedStyle &&
+              window.getComputedStyle(d).getPropertyValue('position') === 'absolute');
+
+          window.addEventListener('message', u, false);
+
+          a.src = 'https://events.sangfor.com/3VxLv';
+          a.id = 'mkin3VxLv';
+          a.frameBorder = 0;
+          a.scrolling = 'no';
+
+          a.style.display = 'block';
+          a.style.width = '100%';
+          a.style.minWidth = '100%';
+          a.style.height = '600px'; // ✅ give initial height
+          a.style.border = 'none';
+
+          a.onload = function () {
+            a.contentWindow.postMessage(JSON.stringify({ cif: 1 }), '*');
+          };
+
+          d.appendChild(a);
+        })(window);
+      });
     </script>
   </head>
   <body>
@@ -326,7 +299,8 @@
             <div class="contact__form">
               <div class="contact__form-header"></div>
               <div class="contact__form-body">
-                <iframe
+                <div id="contact-form" style="width: 100%; max-width: 800px"></div>
+                <!-- <iframe
                   title="Contact Us"
                   allowTransparency="true"
                   scrolling="no"
@@ -339,7 +313,7 @@
                   "
                   frameborder="0"
                   src="https://events.sangfor.com/3VxLv"
-                ></iframe>
+                ></iframe> -->
               </div>
               <div class="contact__form-footer">
                 <p>
@@ -577,59 +551,63 @@
               <thead>
                 <tr>
                   <th class="agenda__table-time">Time</th>
-                  <th class="agenda__table-abstract">Abstract</th>
+                  <th class="agenda__table-topic">Topic</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="agenda__table-time">09:00-09:30</td>
-                  <td>Welcome Snack, Open Demo and Event Registration</td>
+                  <td class="agenda__table-topic">
+                    Welcome Snack, Open Demo and Event Registration
+                  </td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">09:30-09:40</td>
-                  <td>Opening Remarks & Video</td>
+                  <td class="agenda__table-topic">Opening Remarks & Video</td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">09:40-10:10</td>
-                  <td>Beyond One‑for‑One Replacement (VMware → AI‑Ready Infrastructure)</td>
+                  <td class="agenda__table-topic">
+                    Beyond One‑for‑One Replacement (VMware → AI‑Ready Infrastructure)
+                  </td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">10:10-10:40</td>
-                  <td>aStor All‑Flash Unified Storage</td>
+                  <td class="agenda__table-topic">aStor All‑Flash Unified Storage</td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">10:40-11:10</td>
-                  <td>Tea Break & Open Booth</td>
+                  <td class="agenda__table-topic">Tea Break & Open Booth</td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">11:10-11:40</td>
-                  <td>Faster than Fear (AI‑Driven SecOps)</td>
+                  <td class="agenda__table-topic">Faster than Fear (AI‑Driven SecOps)</td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">11:40-12:10</td>
-                  <td>Executive Roundtable / Panel Discussion</td>
+                  <td class="agenda__table-topic">Executive Roundtable / Panel Discussion</td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">12:10-13:10</td>
-                  <td>Lunch & Networking</td>
+                  <td class="agenda__table-topic">Lunch & Networking</td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">13:10-14:10</td>
-                  <td>Eco-Partner Sharing</td>
+                  <td class="agenda__table-topic">Eco-Partner Sharing</td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">14:10-15:10</td>
-                  <td>
+                  <td class="agenda__table-topic">
                     Workshop: Built for Security leaders. Protected by Intelligence. Powered by MDR
                   </td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">15:10-16:30</td>
-                  <td>Workshop: Unveil Sangfor AI Coding Assistant</td>
+                  <td class="agenda__table-topic">Workshop: Unveil Sangfor AI Coding Assistant</td>
                 </tr>
                 <tr>
                   <td class="agenda__table-time">16:30-17:30</td>
-                  <td>Post Event Bites & Networking & Open Demo</td>
+                  <td class="agenda__table-topic">Post Event Bites & Networking & Open Demo</td>
                 </tr>
               </tbody>
             </table>
@@ -784,7 +762,11 @@
         <div class="footer__heading text-center">
           <h2 class="text-gradient">Book Your Seat</h2>
           <p class="text-blue">HURRY UP!</p>
-          <a href="#contact" class="register-btn"> Register Now!</a>
+          <a href="#contact" class="register">
+            <span class="register__inner">
+              <span class="register__inner-text">Register Now!</span>
+            </span>
+          </a>
         </div>
 
         <!-- Venue Card -->
