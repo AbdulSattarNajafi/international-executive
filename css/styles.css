@@ -1015,11 +1015,10 @@ img {
   overflow-x: auto;
 }
 .agenda__table {
-  min-width: 810px;
+  min-width: 830px;
   width: 100%;
   color: var(--white);
   background-color: var(--card-bg);
-  font-size: 1rem;
   box-shadow: var(--box-shadow);
 }
 .agenda__table-header {
@@ -1038,6 +1037,7 @@ img {
   font-weight: 600;
 }
 .agenda__table-time {
+  font-size: 16px;
   flex-shrink: 0;
   min-width: 150px;
   width: 150px;
@@ -1046,10 +1046,11 @@ img {
   border-right: 1px solid #dfeaef;
 }
 .agenda__table-topic {
+  font-size: 16px;
   flex: 1;
   padding: 10px 16px;
-  min-width: 660px;
-  width: 660px;
+  min-width: 680px;
+  width: 680px;
 }
 
 @media (min-width: 992px) {
