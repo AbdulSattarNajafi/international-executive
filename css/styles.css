@@ -1027,6 +1027,7 @@ img {
 }
 .agenda__table thead th,
 .agenda__table tbody td {
+  font-size: 1rem;
   vertical-align: middle;
   padding: 10px 16px;
 }
@@ -1042,6 +1043,11 @@ img {
 }
 .agenda__table thead .agenda__table-topic {
   font-weight: 600;
+  text-align: left;
+  min-width: 660px;
+  width: 660px;
+}
+.agenda__table tbody .agenda__table-topic {
   text-align: left;
   min-width: 660px;
   width: 660px;
