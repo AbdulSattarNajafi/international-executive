@@ -1015,6 +1015,7 @@ img {
   overflow-x: auto;
 }
 .agenda__table {
+  min-width: 810px;
   width: 100%;
   border-collapse: collapse;
   color: var(--white);
