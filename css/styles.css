@@ -1046,10 +1046,9 @@ img {
   padding: 10px 4px;
   text-align: center;
   border-right: 1px solid #dfeaef;
-  color: rgb(27, 242, 92);
 }
 .agenda__table-topic {
-  font-size: 16px;
+  font-size: 16px !important;
   flex: 1;
   padding: 10px 16px;
   min-width: 680px;
