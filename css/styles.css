@@ -1015,7 +1015,7 @@ img {
   overflow-x: auto;
 }
 .agenda__schedule {
-  min-width: 830px;
+  min-width: 840px;
   width: 100%;
   color: var(--white);
   background-color: var(--card-bg);
@@ -1027,6 +1027,11 @@ img {
 .agenda__schedule-row {
   display: flex;
   border-bottom: 1px solid #dfeaef;
+}
+
+.agenda__schedule-row div:last-child {
+  min-width: 10px;
+  width: 10px;
 }
 
 .agenda__schedule-header .agenda__schedule-time {
